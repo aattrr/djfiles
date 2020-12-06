@@ -1,0 +1,14 @@
+{% extends 'djfiles/index.html' %}
+{% load static %}
+{% block content %}
+<br><br><br>
+    <h4 align="center">Страница Регистрации</h4>
+    <br><br>
+    <h2>{{ msg_error }}</h2>
+        <form enctype="multipart/form-data" method="post" action="{% url 'register' %}">
+            {% csrf_token %}
+            {{ form.as_p }}<br><br>
+            <input type="submit" value="Отправить"></td>
+        </form>
+<br><br><br>
+{% endblock content %}

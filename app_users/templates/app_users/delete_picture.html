@@ -1,0 +1,12 @@
+{% extends 'djfiles/index.html' %}
+{% load static %}
+{% block content %}
+<br><br><br>
+<br><br>
+    <p>Картинка удалена</p>
+    <p> {{ pk }}</p>
+    <h2> {{ news_data.id }}</h2>
+
+    <a href="/news" class="default-btn" >Назад</a>
+    <br> <br>
+{% endblock content %}

@@ -1,0 +1,13 @@
+{% extends 'djfiles/index.html' %}
+{% load static %}
+{% block content %}
+<br><br><br>
+<h4 align="center">Изменить персональные данные</h4>
+<br><br>
+    <form action="" method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <input type="submit" value="Сохранить"></td>
+    </form>
+
+{% endblock content %}

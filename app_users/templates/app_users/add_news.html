@@ -1,0 +1,15 @@
+{% extends 'djfiles/index.html' %}
+{% load static %}
+{% block content %}
+<br><br><br>
+<h4 align="center">Добавить новость</h4>
+<br><br>
+
+    <form enctype="multipart/form-data" method="post" action="{% url 'add_news' %}">
+        {% csrf_token %}
+        {{ news_form.as_p }}<br> <br>
+        {{ picture_form.as_p }}<br> <br>
+        <input type="submit" value="Отправить"></td>
+    </form>
+
+{% endblock content %}
